@@ -1,6 +1,15 @@
 import random
 import gym
 
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Flatten
+from tensorflow.keras.optimizers import Adam
+
+from rl.agents import DQNAgent
+from rl.policy import BoltzmannQPolicy
+from rl.memory import SequetialMemory
+
+
 env = gym.make("CartPole-v1", render_mode="human")
 
 
